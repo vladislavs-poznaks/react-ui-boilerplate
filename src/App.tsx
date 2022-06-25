@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './index.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Register from "./components/Register";
 
 function App() {
   return (
-    <main className="bg-red-500">
-      App goes here
-    </main>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/register" element={<Register/>}/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
